@@ -1,0 +1,20 @@
+{
+    "aboutUs": "About Us",
+    "fontSize": "font size",
+    "large": "large",
+    "medium": "medium",
+    "navigate": "navigate",
+    "small": "small",
+    "search": "search",
+    "home": "Home",
+    "tel": "Tel",
+    "fax": "Fax",
+    "address": "Address",
+    "nosu": "Name of Service Unit",
+    "nosp": "Name of Service Operator",
+    "href": "Link",
+    "chooseADistrict":"Choose a district:",
+    "please":"Please choose an option",
+    "details": "Details",
+    "hits": "hits"
+}

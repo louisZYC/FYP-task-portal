@@ -1,0 +1,26 @@
+hr {
+    border: 0.025rem solid #707070;
+    margin: 0;
+}
+
+
+#header {
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+    height        : 6rem;
+}
+
+#header .version,
+#header .size {
+    white-space: nowrap;
+}
+
+#header .size .option {
+    display     : inline-block;
+    margin-right: 2.7%;
+}
+
+#header .nav {
+    margin: 1rem 0;
+}

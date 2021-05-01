@@ -1,0 +1,68 @@
+<div id="page-search" v-show="portalApp.showingPage ==='search'">
+    <div class="breadcrumb">
+        <breadcrumb-item v-for="obj in breadcrumbStack" :obj="obj" v-model="showingSection"
+            @onclicked="breadcrumbOnClicked">
+        </breadcrumb-item>
+    </div>
+
+    <div class="section1 container" v-show="showingSection==1">
+        <div class="search-bar">
+            <input type="text" v-model="keyword" v-on:keyup.13="search"> <button
+                @click="search">{{lang.search}}</button>
+        </div>
+        <div class="hits">
+            <span class="title"> {{lang.hits}}:</span>
+            <page-search-keyword-span v-for="keyword in result_keywords.keyword" :keyword="keyword" @onclicked="keywordOnClicked">
+            </page-search-keyword-span>
+        </div>
+    </div>
+
+    <div class="section2 container" v-show="showingSection==2">
+        <page-search-service-component v-for="service in result_services" :service="service"
+            @onclicked="serviceOnSelected">
+        </page-search-service-component>
+    </div>
+
+    <div class="section3 container" v-show="showingSection==3">
+        <div class="service-div pointer" v-if="selectedService !=null">
+            <div class="column">
+                <span>{{lang.nosu }} : </span>
+                <span> {{lang.nosp}} : </span>
+                <span>{{lang.tel}} : </span>
+                <span> {{lang.address}} : </span>
+                <span> {{lang.fax}} : </span>
+                <span> {{lang.href}} : </span>
+            </div>
+            <div class="column">
+                <span>{{i18n.t(selectedService.nosu,usingLang)}}</span>
+                <span>{{i18n.t(selectedService.nosp,usingLang)}}</span>
+                <span>{{selectedService.tel}}</span>
+                <span>{{i18n.t(selectedService.address,usingLang)}}</span>
+                <span>{{selectedService.fax}}</span>
+                <span><a :href="selectedService.href">{{selectedService.href}}</a></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/html" id="page-search-service-component">
+    <div class="service-div pointer"  @click="serviceOnClicked">
+        <div class="column">
+            <span>{{lang.nosu }} : </span>
+            <span> {{lang.nosp}} : </span>
+            <span> {{lang.address}} : </span>
+            <span class="a">{{lang.details}}</span>
+        </div>
+        <div class="column">
+            <span>{{i18n.t(service.nosu,usingLang)}}</span>
+            <span>{{i18n.t(service.nosp,usingLang)}}</span>
+            <span>{{i18n.t(service.address,usingLang)}}</span>
+        </div>
+    </div>
+</script>
+
+<script type="text/html" id="page-search-keyword-span">
+    <span @click="keywordOnClicked" class="pointer ">
+        {{keyword.name}}
+    </span>
+</script>

@@ -1,0 +1,73 @@
+
+
+#page-navigate .section1 .group-list-container {
+    display       : flex;
+    flex-direction: column;
+}
+
+#page-navigate .section1 .group-list-container span a {
+    font-size: calc(var(--font-size) * 0.55);
+}
+
+#page-navigate .section2 .service-div {
+    border   : 0.025rem solid #6e6e6e;
+    min-width: 42%;
+    float    : left;
+    margin   : 1rem 2% 0 0;
+}
+
+#page-navigate .section2 .service-div .column {
+    display       : flex;
+    flex-direction: column;
+    float         : left;
+}
+
+#page-navigate .section2 .service-div .column span {
+    display    : block;
+    font-size  : calc(var(--font-size) * 0.55);
+    line-height: calc(var(--font-size) * 0.75);
+    ;
+}
+
+#page-navigate .section2 .service-div .column span a {
+    font-size: calc(var(--font-size) * 0.4);
+}
+
+#page-navigate .section2 .district-selector {
+    width     : 4rem;
+    position  : absolute;
+    background: #6e6e6e;
+}
+
+#page-navigate .section2 .district-selector .dropdown {
+    width           : 100%;
+    position        : absolute;
+    top             : 100%;
+    max-height      : 4rem;
+    background-color: white;
+    text-align      : right;
+}
+
+#page-navigate .section3 .service-div {
+    border   : 0.025rem solid #6e6e6e;
+    min-width: 42%;
+    float    : left;
+    margin   : 1rem 2% 0 0;
+}
+
+#page-navigate .section3 .service-div .column {
+    display       : flex;
+    flex-direction: column;
+    float         : left;
+}
+
+#page-navigate .section3 .service-div .column span {
+    display    : block;
+    font-size  : calc(var(--font-size) * 0.55);
+    line-height: calc(var(--font-size) * 0.75);
+    ;
+}
+
+#page-navigate .section3 .service-div .column span a {
+    font-size: calc(var(--font-size) * 0.4);
+}

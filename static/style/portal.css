@@ -1,0 +1,94 @@
+@import 'portal-header.css';
+@import 'portal-navigate.css';
+@import 'portal-search.css';
+
+:root {
+    --font-size: 1rem;
+}
+
+html {
+    font-size : 2.0833vw;
+    box-sizing: border-box;
+    /* 
+    40 pixel in 1920 height screen, 
+    33.33 pixel in 1600 height screen
+
+    40 pixel in XD = 1rem
+    */
+}
+
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html * {
+    font-size: var(--font-size);
+}
+
+a {
+    color                  : black;
+    /* color               : rgb(0, 0, 238); */
+    text-decoration-line   : underline;
+    cursor                 : pointer;
+}
+
+.a {
+    color                  : black;
+    /* color               : rgb(0, 0, 238); */
+    text-decoration-line   : underline;
+    cursor                 : pointer;
+}
+
+body {
+    margin: 0;
+    width : 100vw;
+    height: 100vh;
+}
+
+.page {
+    position: fixed;
+    height  : calc(100% - 6rem);
+    overflow: scroll;
+    width   : 100%;
+}
+
+.container {
+    width       : 100%;
+    height      : 100%;
+    padding-left: 5%;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+/* breadcrumb */
+.breadcrumb {
+    display        : flex;
+    flex-wrap      : wrap;
+    justify-content: flex-start;
+    align-items    : center;
+    margin-left    : 5%;
+}
+
+.breadcrumb-item {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    height         : 100%;
+}
+
+.breadcrumb span {
+    margin   : 0 0.1rem;
+    font-size: calc(var(--font-size) * 0.5);
+}
+
+.breadcrumb img {
+    display: block;
+    height : calc(var(--font-size) * 0.5);
+}
+
+/* breadcrumb */
