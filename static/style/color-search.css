@@ -3,6 +3,12 @@
     text-align: center;
 }
 
+#page-search .section1 .search-bar #___gcse_0 {
+    width    : 35%;
+    margin   : 0 auto;
+    font-size: calc(var(--font-size) * 0.75);
+}
+
 #page-search .section1 .search-bar input {
     outline      : none;
     border       : 0;
@@ -19,6 +25,17 @@
 
 #page-search .section1 .search-bar img {
     height: 1.5rem;
+}
+
+#page-search .section1 .search-bar .recommend {
+    text-align: left;
+    width     : 33%;
+    border    : 1px solid black;
+    margin    : 0 auto;
+}
+
+#page-search .section1 .search-bar .recommend:hover {
+    background-color: #666;
 }
 
 #page-search .section1 .hits {
@@ -77,11 +94,7 @@
     margin       : 1rem 2% 0 0;
 }
 
-#page-search .section1 .search-bar #___gcse_0 {
-    width      : 35%;
-    margin     : 0 auto;
-    font-size: calc(var(--font-size) * 0.75);
-}
+
 
 #page-search .section3 .service-div .column {
     display       : flex;

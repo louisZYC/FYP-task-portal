@@ -9,9 +9,14 @@
         <div class="search-bar">
             <!-- google -->
             <div class="gcse-search"></div>
-            <input type="text" v-model="keyword" v-on:keyup.13="search">
+            <!-- normal bar -->
+            <input type="text" v-model="keyword" v-on:keyup.13="search" @input="isTyping">
             <button @click="search">{{lang.search}}</button>
             <img @click="search" src="../static/img/portal/search.svg">
+            <!-- search recommend -->
+            <div class="recommend" v-for="word in recommendWords" @click="recommendOnSelected(word)">
+                {{word}}
+            </div>
         </div>
         <div class="hits">
             <span class="title"> {{lang.hits}}:</span>
