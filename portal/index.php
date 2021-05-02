@@ -42,7 +42,6 @@
         include_once './pages/portal-navigate.html';
         include_once './pages/portal-search.html';
         include_once './pages/portal-about-us.html';
-        include_once './pages/portal-google.html';
         ?>
 
     </div>
