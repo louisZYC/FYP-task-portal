@@ -1,7 +1,6 @@
 #page-search .section1 .search-bar {
     margin    : 2rem 0 0 0;
     text-align: center;
-    height    : 4rem;
 }
 
 #page-search .section1 .search-bar input {
@@ -23,7 +22,7 @@
 }
 
 #page-search .section1 .hits {
-    margin: 0 5rem;
+    margin: 1rem 5rem 0;
 }
 
 #page-search .section1 .hits span {
@@ -70,12 +69,18 @@
 
 /* s3 */
 #page-search .section3 .service-div {
-    background: #004288;
+    background   : #004288;
     border-radius: 0.5rem;
-padding      : 0.5rem;
-    min-width : 42%;
-    float     : left;
-    margin    : 1rem 2% 0 0;
+    padding      : 0.5rem;
+    min-width    : 42%;
+    float        : left;
+    margin       : 1rem 2% 0 0;
+}
+
+#page-search .section1 .search-bar #___gcse_0 {
+    width      : 35%;
+    margin     : 0 auto;
+    font-size: calc(var(--font-size) * 0.75);
 }
 
 #page-search .section3 .service-div .column {

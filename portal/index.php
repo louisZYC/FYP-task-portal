@@ -8,11 +8,11 @@
     <link href="../static/style/portal.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
     <script type="module" src="../static/js/portal/portal.js"></script>
+    <script async src="https://cse.google.com/cse.js?cx=59aad4c7e7dfb996f"></script>
 </head>
 
 <body>
     <div>
-
         <div id="header">
             <div class="version">
                 <a @click="changeLanguage('zh')">中文</a>
@@ -42,6 +42,7 @@
         include_once './pages/portal-navigate.html';
         include_once './pages/portal-search.html';
         include_once './pages/portal-about-us.html';
+        include_once './pages/portal-google.html';
         ?>
 
     </div>

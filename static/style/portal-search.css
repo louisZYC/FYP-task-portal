@@ -1,23 +1,40 @@
-#page-search .section1 .search-bar{
-    margin: 2rem 0 0 0 ;
+#page-search .section1 .search-bar {
+    margin    : 2rem 0 0 0;
     text-align: center;
-    height: 4rem;
 }
 
-#page-search .section1 .search-bar img{
+#page-search .section1 .search-bar img {
     height: 1rem;
 }
 
-#page-search .section1 .hits {
-    margin: 0 5rem;
+#page-search .section1 .search-bar #___gcse_0{
+    width : 35%;
+    margin: 0 auto;
+    font-size: calc(var(--font-size) * 0.75);
 }
-#page-search .section1 .hits span{
-    display: inline-block;
-    margin: 0 3% 0 0;
+
+#page-search .section1 .search-bar .recommend {
+    text-align: left;
+    width     : 33%;
+    border    : 1px solid black;
+    margin    : 0 auto;
+}
+
+#page-search .section1 .search-bar .recommend:hover {
+    background-color: #666;
+}
+
+#page-search .section1 .hits {
+    margin: 1rem 5rem 0;
+}
+
+#page-search .section1 .hits span {
+    display        : inline-block;
+    margin         : 0 3% 0 0;
     text-decoration: underline;
 }
 
-#page-search .section1 .hits .title{
+#page-search .section1 .hits .title {
     /* color: red; */
     color: black;
 }

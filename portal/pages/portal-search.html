@@ -7,8 +7,16 @@
 
     <div class="section1 container" v-show="showingSection==1">
         <div class="search-bar">
-            <input type="text" v-model="keyword" v-on:keyup.13="search">
+            <!-- google -->
+            <div class="gcse-search"></div>
+            <!-- normal search -->
+            <input type="text" v-model="keyword" v-on:keyup.13="search" @input="isTyping">
+
             <button @click="search">{{lang.search}}</button>
+            <!-- search recommend -->
+            <div class="recommend" v-for="word in recommendWords" @click="recommendOnSelected(word)">
+                {{word}}
+            </div>
         </div>
         <div class="hits">
             <span class="title"> {{lang.hits}}:</span>

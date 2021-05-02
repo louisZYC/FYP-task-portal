@@ -8,6 +8,7 @@
     <link href="../static/style/color.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
     <script type="module" src="../static/js/portal/portal.js"></script>
+    <script async src="https://cse.google.com/cse.js?cx=59aad4c7e7dfb996f"></script>
 </head>
 
 <body>

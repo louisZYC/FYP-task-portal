@@ -7,9 +7,11 @@
 
     <div class="section1 container" v-show="showingSection==1">
         <div class="search-bar">
+            <!-- google -->
+            <div class="gcse-search"></div>
             <input type="text" v-model="keyword" v-on:keyup.13="search">
             <button @click="search">{{lang.search}}</button>
-            <img src="../static/img/portal/search.svg">
+            <img @click="search" src="../static/img/portal/search.svg">
         </div>
         <div class="hits">
             <span class="title"> {{lang.hits}}:</span>

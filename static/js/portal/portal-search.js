@@ -38,10 +38,11 @@ window.search = new Vue({
         await this.reload();
     },
     data: {
-        keyword: "香港西營盤高街2號西營盤社區綜合大樓3字樓",
+        keyword: "",
         result_services_db: [],
         result_services: [],
         result_keywords: [],
+        recommendWords: [],
         showingSection: 1,
         breadcrumbStack: [],
         selectedService: null
@@ -124,6 +125,23 @@ window.search = new Vue({
             this.showingSection = obj.sectionId;
             // console.log(this.breadcrumbStack.indexOf(obj))
             this.breadcrumbStack.splice(this.breadcrumbStack.indexOf(obj) + 1)
+        },
+        recommendOnSelected(word) {
+            this.keyword = word
+            this.recommendWords = []
+        },
+        isTyping() {
+            if (!this.keyword) {
+                // empty word
+                this.recommendWords = []
+                return
+            }
+            console.log(this.keyword)
+            this.recommendWords = []
+            this.result_keywords.keyword.forEach(({ name }) => {
+                if (name.indexOf(this.keyword) != -1)
+                    this.recommendWords.push(name)
+            })
         }
     },
     mounted() {
