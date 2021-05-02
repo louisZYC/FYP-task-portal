@@ -38,7 +38,7 @@ window.search = new Vue({
         await this.reload();
     },
     data: {
-        keyword: "",
+        keyword: "香港西營盤",
         result_services_db: [],
         result_services: [],
         result_keywords: [],
