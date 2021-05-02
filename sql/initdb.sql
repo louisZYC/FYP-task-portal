@@ -26,3 +26,4 @@ CREATE TABLE `KeywordRef` (
 ALTER TABLE `SearchRef` ADD FOREIGN KEY (`search_id`) REFERENCES `SearchHistory` (`search_id`);
 
 ALTER TABLE `KeywordRef` ADD FOREIGN KEY (`kw_id`) REFERENCES `Keyword` (`kw_id`);
+

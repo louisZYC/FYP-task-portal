@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Social Welfare Portal</title>
-    <link href="../static/style/portal.css" rel="stylesheet" type="text/css" />
+    <link href="../static/style/color.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
     <script type="module" src="../static/js/portal/portal.js"></script>
 </head>
@@ -15,11 +15,11 @@
 
         <div id="header">
             <div class="version">
-                <a @click="changeLanguage('zh')">中文</a>
+                <a @click="changeLanguage('zh')"> 中文</a>
                 &nbsp;|&nbsp;
-                <a @click="changeLanguage('en')">English</a>
+                <a @click="changeLanguage('en')">English </a>
                 &nbsp;|&nbsp;
-                <a @click="colorVersion">{{lang.colorfulVersion}}</a>
+                <a @click="textVersion">{{lang.textOnly}}</a>
             </div>
 
             <div class="size">
@@ -39,9 +39,9 @@
 
 
         <?php
-        include_once './pages/portal-navigate.html';
-        include_once './pages/portal-search.html';
-        include_once './pages/portal-about-us.html';
+        include_once './pages/color-navigate.html';
+        include_once './pages/color-search.html';
+        include_once './pages/color-about-us.html';
         ?>
 
     </div>

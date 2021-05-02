@@ -9,6 +9,7 @@
         <div class="search-bar">
             <input type="text" v-model="keyword" v-on:keyup.13="search">
             <button @click="search">{{lang.search}}</button>
+            <img src="../static/img/portal/search.svg">
         </div>
         <div class="hits">
             <span class="title"> {{lang.hits}}:</span>

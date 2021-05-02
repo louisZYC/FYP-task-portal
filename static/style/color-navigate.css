@@ -1,0 +1,103 @@
+#page-navigate .section1 .group-list-container {
+    display       : flex;
+    flex-direction: row;
+    flex-flow     : row wrap;
+}
+
+#page-navigate .section1 .group-list-container span {
+    background   : #007bc7;
+    width        : fit-content;
+    margin       : 1rem 2%;
+    border-radius: 0.25rem;
+    line-height  : 1rem;
+    padding      : 0 1rem;
+}
+
+#page-navigate .section1 .group-list-container span a {
+    color          : white;
+    font-size      : calc(var(--font-size) * 0.55);
+    text-decoration: none;
+}
+
+#page-navigate .section1 .group-list-container span img {
+    width  : 4rem;
+    display: block;
+    filter : invert(1);
+}
+
+#page-navigate .section2 .select-div label {
+    color: #CF0000;
+}
+
+#page-navigate .section2 .service-div {
+    background   : #004288;
+    border-radius: 0.5rem;
+    padding      : 0.5rem;
+    border       : 0.025rem solid #6e6e6e;
+    min-width    : 42%;
+    float        : left;
+    margin       : 1rem 2% 0 0;
+}
+
+#page-navigate .section2 .service-div .column {
+    display       : flex;
+    flex-direction: column;
+    float         : left;
+}
+
+#page-navigate .section2 .service-div .column span {
+    color      : white;
+    display    : block;
+    font-size  : calc(var(--font-size) * 0.55);
+    line-height: calc(var(--font-size) * 0.75);
+    ;
+}
+
+#page-navigate .section2 .service-div .column span a {
+    color    : white;
+    font-size: calc(var(--font-size) * 0.4);
+}
+
+#page-navigate .section2 .district-selector {
+    width     : 4rem;
+    position  : absolute;
+    background: #6e6e6e;
+}
+
+#page-navigate .section2 .district-selector .dropdown {
+    width           : 100%;
+    position        : absolute;
+    top             : 100%;
+    max-height      : 4rem;
+    background-color: white;
+    text-align      : right;
+}
+
+#page-navigate .section3 .service-div {
+    background   : #004288;
+    border-radius: 0.5rem;
+    padding      : 0.5rem;
+    border       : 0.025rem solid #6e6e6e;
+    min-width    : 42%;
+    float        : left;
+    margin       : 1rem 2% 0 0;
+}
+
+#page-navigate .section3 .service-div .column {
+    display       : flex;
+    flex-direction: column;
+    float         : left;
+}
+
+#page-navigate .section3 .service-div .column span {
+    color      : white;
+    display    : block;
+    font-size  : calc(var(--font-size) * 0.55);
+    line-height: calc(var(--font-size) * 0.75);
+    ;
+}
+
+#page-navigate .section3 .service-div .column span a {
+    font-size: calc(var(--font-size) * 0.4);
+    color    : white;
+}

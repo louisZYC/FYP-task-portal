@@ -1,0 +1,67 @@
+<div id="page-navigate" v-show="portalApp.showingPage==='navigate'">
+    <div class="breadcrumb">
+        <breadcrumb-item v-for="obj in breadcrumbStack" :obj="obj" v-model="showingSection"
+            @onclicked="breadcrumbOnClicked">
+        </breadcrumb-item>
+    </div>
+
+    <div class="section1 container" v-show="showingSection==1">
+        <div class="group-list-container">
+            <group-list-item v-for="group in bigGroupList" :group="group" @onclicked="groupOnSelected">
+            </group-list-item>
+        </div>
+    </div>
+
+    <div class="section2 container" v-show="showingSection==2">
+        <div class="select-div">
+            <label for="district-select">{{lang.chooseADistrict}}</label>
+            <select id="district-select" @change="changeDistrict(event)">
+                <option value="" disabled>--{{lang.please}}--</option>
+                <option v-for="district in districtList" :value="JSON.stringify(district)">
+                    {{i18n.t(district.name,usingLang)}}
+                </option>
+            </select>
+        </div>
+
+        <service-component v-for="service in result_services" :service="service"></service-component>
+    </div>
+
+    <div class="section3 container" v-show="showingSection == 3">
+        <service-component v-for="service in result_services_section3" :service="service"></service-component>
+    </div>
+</div>
+
+<script type="text/html" id="group-list-item">
+    <span  @click="groupOnClicked(this.group)" class="pointer">
+        <img :src="group.img">
+        <a> {{i18n.t(group.name,usingLang)}}</a>
+    </span>
+</script>
+
+<script type="text/html" id="breadcrumb-item">
+    <div class="breadcrumb-item"  @click="onclicked()"> 
+        <span class="a">{{i18n.t(obj.name,usingLang)}}</span>
+        <img src="../static/img/portal/right.svg">
+    </div>
+</script>
+
+<script type="text/html" id="service-component">
+    <div class="service-div">
+        <div class="column">
+            <span>{{lang.nosu }} : </span>
+            <span> {{lang.nosp}} : </span>
+            <span>{{lang.tel}} : </span>
+            <span> {{lang.address}} : </span>
+            <span> {{lang.fax}} : </span>
+            <span> {{lang.href}} : </span>
+        </div>
+        <div class="column">
+            <span>{{i18n.t(service.nosu,usingLang)}}</span>
+            <span>{{i18n.t(service.nosp,usingLang)}}</span>
+            <span>{{service.tel}}</span>
+            <span>{{i18n.t(service.address,usingLang)}}</span>
+            <span>{{service.fax}}</span>
+            <span><a :href="service.href">{{service.href}}</a></span>
+        </div>
+    </div>
+</script>

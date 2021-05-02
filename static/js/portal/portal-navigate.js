@@ -28,11 +28,7 @@ Vue.component('service-component', {
 Vue.component('breadcrumb-item', {
     props: ['obj'],
     methods: {
-        async onclicked() {
-            if (this.obj.sectionId == 1 && portalApp.showingPage == 'search') {
-                await keywordCollector.commit()
-                await window.search.reload();
-            }
+        onclicked() {
             this.$emit('onclicked', this.obj)
         }
     },
@@ -95,6 +91,23 @@ window.navigate = new Vue({
                 return acc
             }
         }, [])
+
+        const imgList = [
+            "../static/img/portal/navigate/elderly.svg",
+            "../static/img/portal/navigate/family.svg",
+            "../static/img/portal/navigate/psychology.svg",
+            "../static/img/portal/navigate/rehabilitation.svg",
+            "../static/img/portal/navigate/socialDevelopment.svg",
+            "../static/img/portal/navigate/socialSecurity.svg",
+            "../static/img/portal/navigate/elderly.svg",
+            "../static/img/portal/navigate/family.svg",
+            "../static/img/portal/navigate/psychology.svg",
+        ]
+        
+        this.bigGroupList.forEach((current,index) => {
+            current.img = imgList[index]
+        })
+
     },
     data: {
         showingSection: 1,

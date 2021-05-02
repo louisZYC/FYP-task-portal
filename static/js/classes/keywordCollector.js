@@ -29,6 +29,8 @@ const keywordCollector = {
         }
 
         const response = await WebApi.postData('/api/keyword/add', JSON.stringify(json))
+        this.content = ''
+        this.ref = []
         console.log("keywordCotroller commit()")
         return response
     },

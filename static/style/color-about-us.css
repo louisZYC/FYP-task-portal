@@ -1,0 +1,14 @@
+#page-about-us .section1 .content-container {
+    padding         : 0 2rem;
+    background-color: #004280;
+    width           : 80%;
+    border-radius   : 0.5rem;
+    padding         : 0.5rem;
+    height          : 5rem;
+
+}
+
+#page-about-us .section1 .content-container .content {
+    white-space: pre-line;
+    color      : white;
+}

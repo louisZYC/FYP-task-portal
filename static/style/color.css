@@ -1,7 +1,7 @@
-@import 'portal-header.css';
-@import 'portal-navigate.css';
-@import 'portal-search.css';
-@import 'portal-about-us.css';
+@import 'color-header.css';
+@import 'color-navigate.css';
+@import 'color-search.css';
+@import 'color-about-us.css';
 
 :root {
     --font-size: 1rem;
@@ -30,23 +30,22 @@ html * {
 }
 
 a {
-    color                  : black;
-    /* color               : rgb(0, 0, 238); */
+    color                  : white;
     text-decoration-line   : underline;
     cursor                 : pointer;
 }
 
 .a {
-    color                  : black;
-    /* color               : rgb(0, 0, 238); */
+    color                  : white;
     text-decoration-line   : underline;
     cursor                 : pointer;
 }
 
 body {
-    margin: 0;
-    width : 100vw;
-    height: 100vh;
+    font-family: "Microsoft JhengHei";
+    margin    : 0;
+    width     : 100vw;
+    height    : 100vh;
 }
 
 .page {
@@ -92,5 +91,13 @@ body {
     font-size: calc(var(--font-size) * 0.5);
 }
 
+.breadcrumb-item span {
+    margin   : 0 0.1rem;
+    font-size: calc(var(--font-size) * 0.5);
+}
+
+.breadcrumb-item span.a{
+    color: black;
+}
 
 /* breadcrumb */

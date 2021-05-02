@@ -34,6 +34,7 @@ Vue.component('page-search-keyword-span', {
 window.search = new Vue({
     el: '#page-search',
     async created() {
+        this.result_services_db = await WebApi.fetchJson('/data/ngoinfo/services/services.json')
         await this.reload();
     },
     data: {
@@ -43,14 +44,12 @@ window.search = new Vue({
         result_keywords: [],
         showingSection: 1,
         breadcrumbStack: [],
-        selectedKeyword: null,
         selectedService: null
     },
     methods: {
         async reload() {
             await WebApi._getData('/api/keyword/update');
             this.result_keywords = await WebApi.fetchJson('/api/keyword/get');
-            this.result_services_db = await WebApi.fetchJson('/data/ngoinfo/services/services.json')
         },
         kPageLeaveEvent() {
             this.keyword = ''
@@ -59,6 +58,7 @@ window.search = new Vue({
         },
         async search() {
             if (this.showingSection != 1) return
+            await keywordCollector.commit()
             this.showingSection = 2
 
             const json = {
@@ -93,8 +93,8 @@ window.search = new Vue({
         keywordOnClicked(keyword) {
             if (this.showingSection != 1) return
             this.showingSection = 2
+            this.result_services = []
 
-            this.selectedKeyword = keyword
             this.breadcrumbStack.push({
                 name: {
                     zh: keyword.name
@@ -102,13 +102,25 @@ window.search = new Vue({
                 sectionId: 2
             })
 
-            const keywordRef = this.result_keywords.keywordref.filter(kr => kr.kw_id == keyword.kw_id)
-            const filterIds = keywordRef.map(kr => kr.service_id)
-            this.result_services = this.result_services_db.filter(s => {
-                return filterIds.includes(s.uuid)
-            })
+            const keywordRef = this.result_keywords.keywordref
+                .filter(kr => {
+                    return kr.kw_id == keyword.kw_id
+                })
+                .sort((a, b) => {
+                    return a.score - b.score > 0 ? -1 : 1
+                })
+
+            keywordRef.forEach(kr => {
+                const result = this.result_services_db.find(service => service.uuid == kr.service_id)
+                this.result_services.push(result)
+            });
+
         },
-        breadcrumbOnClicked(obj) {
+        async breadcrumbOnClicked(obj) {
+            if (obj.sectionId == 1) {
+                await keywordCollector.commit()
+                await this.reload()
+            }
             this.showingSection = obj.sectionId;
             // console.log(this.breadcrumbStack.indexOf(obj))
             this.breadcrumbStack.splice(this.breadcrumbStack.indexOf(obj) + 1)

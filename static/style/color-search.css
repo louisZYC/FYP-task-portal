@@ -1,0 +1,96 @@
+#page-search .section1 .search-bar {
+    margin    : 2rem 0 0 0;
+    text-align: center;
+    height    : 4rem;
+}
+
+#page-search .section1 .search-bar input {
+    outline      : none;
+    border       : 0;
+    border-bottom: 0.125rem solid #004288;
+}
+
+#page-search .section1 .search-bar button {
+    border-radius: 0.125rem;
+    height       : 1.5rem;
+    background   : #007bc7;
+    color        : white;
+    border       : 0.025rem solid #707070;
+}
+
+#page-search .section1 .search-bar img {
+    height: 1.5rem;
+}
+
+#page-search .section1 .hits {
+    margin: 0 5rem;
+}
+
+#page-search .section1 .hits span {
+    border-radius  : 0.125rem;
+    background     : #007bc7;
+    color          : white;
+    display        : inline-block;
+    margin         : 0 3% 0 0;
+    text-decoration: none;
+}
+
+#page-search .section1 .hits .title {
+    background: white;
+    color     : black;
+}
+
+#page-search .section2 .service-div {
+    background   : #004288;
+    border-radius: 0.5rem;
+    padding      : 0.5rem;
+    border       : 0.025rem solid #6e6e6e;
+    min-width    : 42%;
+    float        : left;
+    margin       : 1rem 2% 0 0;
+}
+
+#page-search .section2 .service-div .column {
+    display       : flex;
+    flex-direction: column;
+    float         : left;
+}
+
+#page-search .section2 .service-div .column span {
+    color      : white;
+    display    : block;
+    font-size  : calc(var(--font-size) * 0.55);
+    line-height: calc(var(--font-size) * 0.75);
+    ;
+}
+
+#page-search .section2 .service-div .column span a {
+    font-size: calc(var(--font-size) * 0.4);
+}
+
+/* s3 */
+#page-search .section3 .service-div {
+    background: #004288;
+    border-radius: 0.5rem;
+padding      : 0.5rem;
+    min-width : 42%;
+    float     : left;
+    margin    : 1rem 2% 0 0;
+}
+
+#page-search .section3 .service-div .column {
+    display       : flex;
+    flex-direction: column;
+    float         : left;
+}
+
+#page-search .section3 .service-div .column span {
+    color      : white;
+    display    : block;
+    font-size  : calc(var(--font-size) * 0.75);
+    line-height: calc(var(--font-size) * 1);
+}
+
+#page-search .section3 .service-div .column span a {
+    font-size: calc(var(--font-size) * 0.55);
+}

@@ -10,6 +10,12 @@ window.header = new Vue({
         },
         changeFontSize(level){
             document.querySelector(':root').style.setProperty('--font-size', `${level}rem`)
+        },
+        colorVersion(){
+            window.location = './color.php'
+        },
+        textVersion(){
+            window.location = './index.php'
         }
     },
     mounted() {

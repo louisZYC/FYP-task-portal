@@ -1,0 +1,29 @@
+hr {
+    background: rgba(177, 177, 177, 0.7);
+    margin    : 0;
+}
+
+
+#header {
+    background    : #004288;
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+    height        : 6rem;
+}
+
+#header .version,
+#header .size {
+    color      : white;
+    white-space: nowrap;
+}
+
+#header .size .option {
+    display     : inline-block;
+    margin-right: 2.7%;
+}
+
+#header .nav {
+    color:white;
+    margin: 1rem 0;
+}

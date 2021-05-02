@@ -1,0 +1,7 @@
+#page-about-us .section1 .content-container{
+    padding:  0 2rem;
+}
+
+#page-about-us .section1 .content-container .content{
+    white-space: pre-line;
+}
